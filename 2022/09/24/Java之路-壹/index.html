@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 6.3.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="E-Maker">
+  
+
+  
+
+  
+
+  <title>Java之路-壹 | E-Maker&#39;s Home</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(https://api.iculture.cc/api/img/acg.php?id=14)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          E-Maker&#39;s Home
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">Java之路-壹</h1>
+          <h2 class="title-sub-wrap">
+            <strong>E-Maker</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2022-09-24T03:37:06.000Z" itemprop="datePublished">2022-09-24</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/Java/">📒 Java</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/Java%E5%9F%BA%E7%A1%80/">🏷️ Java基础</a></li>
+  
+    <li><a href="/tags/Java%E8%AF%AD%E6%B3%95/">🏷️ Java语法</a></li>
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="Java之路-壹"><a href="#Java之路-壹" class="headerlink" title="Java之路-壹"></a>Java之路-壹</h1><p><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-tutorial.html">Java</a>不会的话，还真不行，兄弟们 ！！！</p>
+<h2 id="Java特性"><a href="#Java特性" class="headerlink" title="Java特性"></a>Java特性</h2><h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><ul>
+<li>类</li>
+<li>接口</li>
+<li>继承</li>
+<li>多态</li>
+</ul>
+<h3 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h3><h3 id="解释性语言"><a href="#解释性语言" class="headerlink" title="解释性语言"></a>解释性语言</h3><h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>对象是类的一个实例，有状态和行为</p>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>类是一个模板，它描述一类对象的行为和状态</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>方法就是行为，一个类可以有很多方法</p>
+<h2 id="Java语法"><a href="#Java语法" class="headerlink" title="Java语法"></a>Java语法</h2><h3 id="大小写敏感"><a href="#大小写敏感" class="headerlink" title="大小写敏感"></a>大小写敏感</h3><h3 id="类名"><a href="#类名" class="headerlink" title="类名"></a>类名</h3><p>对于所有的类来说，类名的首字母应该大写</p>
+<h3 id="方法名"><a href="#方法名" class="headerlink" title="方法名"></a>方法名</h3><p>所有的方法名都应该以小写字母开头，如果方法名含有若干单词，则后面的每个单词首字母大写</p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>每个类都有构造方法。如果没有显式地为类定义构造方法，Java 编译器将会为该类提供一个默认构造方法。在创建一个对象的时候，至少要调用一个构造方法。构造方法的名称必须与类同名，一个类可以有多个构造方法</p>
+<h3 id="源文件名"><a href="#源文件名" class="headerlink" title="源文件名"></a>源文件名</h3><p>源文件名必须和类名相同</p>
+<h3 id="源文件声明规则"><a href="#源文件声明规则" class="headerlink" title="源文件声明规则"></a>源文件声明规则</h3><ul>
+<li>一个源文件中只能有一个 public 类</li>
+<li>一个源文件可以有多个非 public 类</li>
+<li>源文件的名称应该和 public 类的类名保持一致</li>
+<li></li>
+</ul>
+<h3 id="主方法入口"><a href="#主方法入口" class="headerlink" title="主方法入口"></a>主方法入口</h3><p>所有的 Java 程序由 <strong>public static void main(String[] args)</strong> 方法开始执行<code>ps：IDEA按下psvm可直接生成该方法</code></p>
+<h2 id="Java修饰符"><a href="#Java修饰符" class="headerlink" title="Java修饰符"></a>Java修饰符</h2><ul>
+<li><p><code>private</code> 私有</p>
+</li>
+<li><p><code>public</code> 公有</p>
+</li>
+<li><p><code>protected</code> 受保护</p>
+</li>
+<li><p><code>static</code> 静态</p>
+</li>
+<li><p><code>final</code> 最终</p>
+</li>
+<li><p><code>abstract</code> 抽象</p>
+</li>
+<li><p><code>synchronized</code> 声明的方法同一时间只能被一个线程访问</p>
+</li>
+<li><p><code>transient</code> 序列化的对象包含被 transient 修饰的实例变量时，java 虚拟机(JVM)跳过该特定的变量</p>
+</li>
+<li><p><code>volatile</code> volatile 修饰的成员变量在每次被线程访问时，都强制从共享内存中重新读取该成员变量的值。而且，当成员变量发生变化时，会强制线程将变化值回写到共享内存。这样在任何时刻，两个不同的线程总是看到某个成员变量的同一个值</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">修饰符</th>
+<th align="left">当前类</th>
+<th align="left">同一包内</th>
+<th align="left">子孙类(同一包)</th>
+<th align="left">子孙类(不同包)</th>
+<th align="left">其他包</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>public</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+</tr>
+<tr>
+<td align="left"><code>protected</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y&#x2F;N</td>
+<td align="left">N</td>
+</tr>
+<tr>
+<td align="left"><code>default</code></td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">Y</td>
+<td align="left">N</td>
+<td align="left">N</td>
+</tr>
+<tr>
+<td align="left"><code>private</code></td>
+<td align="left">Y</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+<td align="left">N</td>
+</tr>
+</tbody></table>
+<h2 id="Java继承"><a href="#Java继承" class="headerlink" title="Java继承"></a>Java继承</h2><h3 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h3><p>类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一个类</p>
+<h3 id="implements"><a href="#implements" class="headerlink" title="implements"></a>implements</h3><p>使用 implements 关键字可以变相的使java具有多继承的特性，使用范围为类继承接口的情况，可以同时继承多个接口</p>
+<h3 id="super"><a href="#super" class="headerlink" title="super"></a>super</h3><p>通过super关键字来实现对父类成员的访问，用来引用当前对象的父类</p>
+<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>指向自己的引用</p>
+<h3 id="final"><a href="#final" class="headerlink" title="final"></a>final</h3><p>可以用来修饰变量（包括类属性、对象属性、局部变量和形参）、方法（包括类方法和对象方法）和类</p>
+<p>使用 final 关键字声明类，就是把类定义定义为最终类，不能被继承，或者用于修饰方法，该方法不能被子类重写</p>
+<h2 id="Java重载-amp-重写"><a href="#Java重载-amp-重写" class="headerlink" title="Java重载&amp;重写"></a>Java重载&amp;重写</h2><table>
+<thead>
+<tr>
+<th align="center">区别点</th>
+<th align="left">重载方法</th>
+<th align="left">重写方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">参数列表</td>
+<td align="left">必须修改</td>
+<td align="left">一定不能修改</td>
+</tr>
+<tr>
+<td align="center">返回类型</td>
+<td align="left">可以修改</td>
+<td align="left">一定不能修改</td>
+</tr>
+<tr>
+<td align="center">异常</td>
+<td align="left">可以修改</td>
+<td align="left">可以减少或删除，一定不能抛出新的或者更广的异常</td>
+</tr>
+<tr>
+<td align="center">访问</td>
+<td align="left">可以修改</td>
+<td align="left">一定不能做更严格的限制（可以降低限制）</td>
+</tr>
+</tbody></table>
+<h2 id="Java多态"><a href="#Java多态" class="headerlink" title="Java多态"></a>Java多态</h2><p>多态是同一个行为具有多个不同表现形式或形态的能力。多态就是同一个接口，使用不同的实例而执行不同操作</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>消除类型之间的耦合关系</li>
+<li>可替换性</li>
+<li>可扩充性</li>
+<li>接口性</li>
+<li>灵活性</li>
+<li>简化性</li>
+</ul>
+<h3 id="存在的三个必要条件"><a href="#存在的三个必要条件" class="headerlink" title="存在的三个必要条件"></a>存在的三个必要条件</h3><ul>
+<li>继承</li>
+<li>重写</li>
+<li>父类引用指向子类对象：<code>Parent p = new Child();</code></li>
+</ul>
+<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><ul>
+<li>重写</li>
+<li>接口</li>
+<li>抽象类和抽象方法</li>
+</ul>
+<h2 id="Java抽象类"><a href="#Java抽象类" class="headerlink" title="Java抽象类"></a>Java抽象类</h2><ul>
+<li>抽象类不能被实例化，如果被实例化，就会报错，编译无法通过。只有抽象类的非抽象子类可以创建对象。</li>
+<li>抽象类中不一定包含抽象方法，但是有抽象方法的类必定是抽象类。</li>
+<li>抽象类中的抽象方法只是声明，不包含方法体，就是不给出方法的具体实现也就是方法的具体功能。</li>
+<li>构造方法，类方法（用 static 修饰的方法）不能声明为抽象方法。</li>
+<li>抽象类的子类必须给出抽象类中的抽象方法的具体实现，除非该子类也是抽象类。</li>
+</ul>
+<h2 id="Java封装"><a href="#Java封装" class="headerlink" title="Java封装"></a>Java封装</h2><p>封装是指一种将抽象性函式接口的实现细节部分包装、隐藏起来的方法。</p>
+<p>封装可以被认为是一个保护屏障，防止该类的代码和数据被外部类定义的代码随机访问。</p>
+<p>要访问该类的代码和数据，必须通过严格的接口控制。</p>
+<p>封装最主要的功能在于我们能修改自己的实现代码，而不用修改那些调用我们代码的程序片段。</p>
+<h3 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>良好的封装能够减少耦合</li>
+<li>类内部的结构可以自由修改</li>
+<li>可以对成员变量进行更精确的控制</li>
+<li>隐藏信息，实现细节</li>
+</ul>
+<h3 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h3><ul>
+<li>修改属性的可见性来限制对属性的访问（一般限制为private）</li>
+<li>对每个值属性提供对外的公共方法访问，也就是创建一对赋取值方法，用于对私有属性的访问。想要访问私有属性时只能调用该公共方法</li>
+</ul>
+<h2 id="Java接口"><a href="#Java接口" class="headerlink" title="Java接口"></a>Java接口</h2><h3 id="与类的相似点"><a href="#与类的相似点" class="headerlink" title="与类的相似点"></a>与类的相似点</h3><ul>
+<li>一个接口可以有多个方法</li>
+<li>接口文件保存在 .java 结尾的文件中，文件名使用接口名</li>
+<li>接口的字节码文件保存在 .class 结尾的文件中</li>
+<li>接口相应的字节码文件必须在与包名称相匹配的目录结构中</li>
+</ul>
+<h3 id="与类的区别"><a href="#与类的区别" class="headerlink" title="与类的区别"></a>与类的区别</h3><ul>
+<li>接口不能用于实例化对象</li>
+<li>接口没有构造方法</li>
+<li>接口中所有的方法必须是抽象方法，Java 8 之后 接口中可以使用 default 关键字修饰的非抽象方法</li>
+<li>接口不能包含成员变量，除了 static 和 final 变量</li>
+<li>接口不是被类继承了，而是要被类实现</li>
+<li>接口支持多继承</li>
+</ul>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>接口中每一个方法也是隐式抽象的,接口中的方法会被隐式的指定为 <strong>public abstract</strong>（只能是 public abstract，其他修饰符都会报错）</li>
+<li>接口中可以含有变量，但是接口中的变量会被隐式的指定为 <strong>public static final</strong> 变量（并且只能是 public，用 private 修饰会报编译错误）</li>
+<li>接口中的方法是不能在接口中实现的，只能由实现接口的类来实现接口中的方法</li>
+</ul>
+<h3 id="与抽象类的区别"><a href="#与抽象类的区别" class="headerlink" title="与抽象类的区别"></a>与抽象类的区别</h3><ul>
+<li>抽象类中的方法可以有方法体，就是能实现方法的具体功能，但是接口中的方法不行</li>
+<li>抽象类中的成员变量可以是各种类型的，而接口中的成员变量只能是 <strong>public static final</strong> 类型的</li>
+<li>接口中不能含有静态代码块以及静态方法(用 static 修饰的方法)，而抽象类是可以有静态代码块和静态方法</li>
+<li>一个类只能继承一个抽象类，而一个类却可以实现多个接口</li>
+</ul>
+
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://api.iculture.cc/api/img/acg.php?id=15"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2022/09/24/Java%E4%B9%8B%E8%B7%AF-%E8%B4%B0/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Java之路-贰</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://api.iculture.cc/api/img/acg.php?id=13"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2022/09/24/%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%B2%81/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">二十四岁</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="https://s.gravatar.com/avatar/2d6b803eea37de0257620d5fabee7e64?s=200&amp;r=g&amp;d=retro" class="soft-size--round soft-style--box" alt="E-Maker">
+    
+    
+      <h2>E-Maker</h2>
+    
+    
+      <p>一枚小白</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>15</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        4
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        43
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<section class="widget-toc widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-toc" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M134.50666666 767.46666668H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.23999999v50.13333333c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H134.50666666c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.13333333c0.10666668-27.73333333 22.50666668-50.24000001 50.24000001-50.24000001zM84.37333332 541.65333333h326.18666669c27.73333333 0 50.24000001 22.39999999 50.23999999 50.13333334v50.24000001c0 27.73333333-22.50666668 50.24000001-50.24000002 50.23999999H84.37333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.23999999v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333334zM134.50666666 315.83999999H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.24000001v50.24000001c0 27.73333333-22.50666668 50.13333334-50.24000001 50.13333333H134.50666666c-27.73333333 0-50.24000001-22.39999999-50.23999999-50.13333333v-50.24000001c0.10666668-27.84000001 22.50666668-50.24000001 50.24000001-50.23999999zM209.81333332 89.91999999h326.18666671c27.73333333 0 50.24000001 22.39999999 50.23999997 50.13333335v50.23999999c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H209.81333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333333zM692.05333333 623.36l274.66666669 176.00000002c23.36000001 14.93333333 30.08 45.97333334 15.14666666 69.33333332L954.77333334 910.93333333c-14.93333333 23.25333334-45.97333334 30.08-69.33333335 15.14666667l-274.66666666-176c-23.36000001-14.93333333-30.08-45.97333334-15.14666667-69.33333333l27.09333334-42.24000001c14.93333333-23.36000001 46.08000001-30.08 69.33333333-15.14666666z" fill="currentColor"></path>
+</svg>
+    <span>TOC</span>
+  </div>
+  <div class="widget-body">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E7%89%B9%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">Java特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.1.</span> <span class="toc-text">面向对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">分布式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80"><span class="toc-number">1.3.</span> <span class="toc-text">解释性语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.4.</span> <span class="toc-text">多线程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.1.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">2.2.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E8%AF%AD%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">Java语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F"><span class="toc-number">3.1.</span> <span class="toc-text">大小写敏感</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%90%8D"><span class="toc-number">3.2.</span> <span class="toc-text">类名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%90%8D"><span class="toc-number">3.3.</span> <span class="toc-text">方法名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="toc-number">3.4.</span> <span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-number">3.5.</span> <span class="toc-text">源文件名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E6%96%87%E4%BB%B6%E5%A3%B0%E6%98%8E%E8%A7%84%E5%88%99"><span class="toc-number">3.6.</span> <span class="toc-text">源文件声明规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%96%B9%E6%B3%95%E5%85%A5%E5%8F%A3"><span class="toc-number">3.7.</span> <span class="toc-text">主方法入口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">4.</span> <span class="toc-text">Java修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E7%BB%A7%E6%89%BF"><span class="toc-number">5.</span> <span class="toc-text">Java继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#extends"><span class="toc-number">5.1.</span> <span class="toc-text">extends</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#implements"><span class="toc-number">5.2.</span> <span class="toc-text">implements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#super"><span class="toc-number">5.3.</span> <span class="toc-text">super</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#this"><span class="toc-number">5.4.</span> <span class="toc-text">this</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final"><span class="toc-number">5.5.</span> <span class="toc-text">final</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E9%87%8D%E8%BD%BD-amp-%E9%87%8D%E5%86%99"><span class="toc-number">6.</span> <span class="toc-text">Java重载&amp;重写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%A4%9A%E6%80%81"><span class="toc-number">7.</span> <span class="toc-text">Java多态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">7.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%9C%A8%E7%9A%84%E4%B8%89%E4%B8%AA%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="toc-number">7.2.</span> <span class="toc-text">存在的三个必要条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-number">7.3.</span> <span class="toc-text">实现方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number">8.</span> <span class="toc-text">Java抽象类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%B0%81%E8%A3%85"><span class="toc-number">9.</span> <span class="toc-text">Java封装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9-1"><span class="toc-number">9.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="toc-number">9.2.</span> <span class="toc-text">实现步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E6%8E%A5%E5%8F%A3"><span class="toc-number">10.</span> <span class="toc-text">Java接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E7%B1%BB%E7%9A%84%E7%9B%B8%E4%BC%BC%E7%82%B9"><span class="toc-number">10.1.</span> <span class="toc-text">与类的相似点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">10.2.</span> <span class="toc-text">与类的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-number">10.3.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">10.4.</span> <span class="toc-text">与抽象类的区别</span></a></li></ol></li></ol>
+  </div>
+</section>
+
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>博客主题更新，主题详情查看https://github.com/miiiku/flex-block</p>
+  </div>
+</section>
+
+
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+        <li class="categorys-list-item">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/">
+            技术博客 (11)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/categories/Java/">
+            Java (2)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/VulnStack/">
+            VulnStack (6)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+            个人博客 (2)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/CVE-2020-1472/" style="font-size: 10px;" class="tags-cloud-0">CVE-2020-1472</a> <a href="/tags/CVE-2021-44228/" style="font-size: 10px;" class="tags-cloud-0">CVE-2021-44228</a> <a href="/tags/CobaltStrike/" style="font-size: 10px;" class="tags-cloud-0">CobaltStrike</a> <a href="/tags/Hexo/" style="font-size: 10px;" class="tags-cloud-0">Hexo</a> <a href="/tags/Java%E5%8F%8D%E5%B0%84/" style="font-size: 10px;" class="tags-cloud-0">Java反射</a> <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 10px;" class="tags-cloud-0">Java基础</a> <a href="/tags/Java%E8%AF%AD%E6%B3%95/" style="font-size: 10px;" class="tags-cloud-0">Java语法</a> <a href="/tags/Log4j2/" style="font-size: 10px;" class="tags-cloud-0">Log4j2</a> <a href="/tags/MSF/" style="font-size: 10px;" class="tags-cloud-0">MSF</a> <a href="/tags/NTLM/" style="font-size: 10px;" class="tags-cloud-0">NTLM</a> <a href="/tags/RCE/" style="font-size: 10px;" class="tags-cloud-0">RCE</a> <a href="/tags/Windows%E8%AE%A4%E8%AF%81/" style="font-size: 10px;" class="tags-cloud-0">Windows认证</a> <a href="/tags/access-token/" style="font-size: 10px;" class="tags-cloud-0">access token</a> <a href="/tags/cobaltstrike/" style="font-size: 10px;" class="tags-cloud-0">cobaltstrike</a> <a href="/tags/cs-msf%E4%BA%92%E8%BD%AC/" style="font-size: 10px;" class="tags-cloud-0">cs/msf互转</a> <a href="/tags/joomla/" style="font-size: 10px;" class="tags-cloud-0">joomla</a> <a href="/tags/kerberos/" style="font-size: 10px;" class="tags-cloud-0">kerberos</a> <a href="/tags/ms14-058/" style="font-size: 10px;" class="tags-cloud-0">ms14-058</a> <a href="/tags/ms14-068/" style="font-size: 14px;" class="tags-cloud-4">ms14-068</a> <a href="/tags/ms17-010/" style="font-size: 12px;" class="tags-cloud-2">ms17-010</a> <a href="/tags/ms17-010%E9%97%B4%E6%8E%A5%E5%88%A9%E7%94%A8/" style="font-size: 10px;" class="tags-cloud-0">ms17-010间接利用</a> <a href="/tags/mysql%E8%8E%B7%E5%8F%96webshell/" style="font-size: 10px;" class="tags-cloud-0">mysql获取webshell</a> <a href="/tags/next/" style="font-size: 10px;" class="tags-cloud-0">next</a> <a href="/tags/phpmyadmin/" style="font-size: 10px;" class="tags-cloud-0">phpmyadmin</a> <a href="/tags/sc%E5%91%BD%E4%BB%A4/" style="font-size: 10px;" class="tags-cloud-0">sc命令</a> <a href="/tags/struts2/" style="font-size: 10px;" class="tags-cloud-0">struts2</a> <a href="/tags/thinkphp5-rce/" style="font-size: 10px;" class="tags-cloud-0">thinkphp5-rce</a> <a href="/tags/tomcat/" style="font-size: 10px;" class="tags-cloud-0">tomcat</a> <a href="/tags/usage/" style="font-size: 10px;" class="tags-cloud-0">usage</a> <a href="/tags/weblogic/" style="font-size: 12px;" class="tags-cloud-2">weblogic</a> <a href="/tags/why/" style="font-size: 12px;" class="tags-cloud-2">why</a> <a href="/tags/windows-linux%E9%98%B2%E7%81%AB%E5%A2%99/" style="font-size: 10px;" class="tags-cloud-0">windows/linux防火墙</a> <a href="/tags/windows%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/" style="font-size: 10px;" class="tags-cloud-0">windows命令执行</a> <a href="/tags/%E4%BB%A4%E7%89%8C%E4%BC%AA%E9%80%A0/" style="font-size: 10px;" class="tags-cloud-0">令牌伪造</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E5%9B%9E%E6%98%BE/" style="font-size: 10px;" class="tags-cloud-0">信息回显</a> <a href="/tags/%E5%86%85%E7%BD%91%E5%A4%9A%E5%B1%82%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86/" style="font-size: 10px;" class="tags-cloud-0">内网多层网络代理</a> <a href="/tags/%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1/" style="font-size: 10px;" class="tags-cloud-0">内网服务</a> <a href="/tags/%E5%86%85%E7%BD%91%E9%9D%B6%E6%9C%BA/" style="font-size: 18px;" class="tags-cloud-8">内网靶机</a> <a href="/tags/%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83/" style="font-size: 10px;" class="tags-cloud-0">域内提权</a> <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/" style="font-size: 20px;" class="tags-cloud-10">渗透测试</a> <a href="/tags/%E7%99%BD%E9%93%B6%E7%A5%A8%E6%8D%AE/" style="font-size: 10px;" class="tags-cloud-0">白银票据</a> <a href="/tags/%E8%84%8F%E7%89%9B/" style="font-size: 10px;" class="tags-cloud-0">脏牛</a> <a href="/tags/%E9%BB%84%E9%87%91%E7%A5%A8%E6%8D%AE/" style="font-size: 16px;" class="tags-cloud-6">黄金票据</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/imemaker" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+      
+    </div>
+     
+    <p>&copy; 2022 <a href="/" target="_blank">E-Maker</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
